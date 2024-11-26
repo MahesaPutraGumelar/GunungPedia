@@ -53,6 +53,7 @@
             android:text="Login"
             android:backgroundTint="@color/primary"
             android:layout_marginBottom="10dp"
+            android:onClick="login"
             android:elevation="8dp"/>
 
         <Button
@@ -61,6 +62,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:textColor="@color/primary"
+            android:onClick="register"
             android:text="Register" />
 
        <TextView
