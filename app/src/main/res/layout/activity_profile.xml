@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".HomeActivity">
+    tools:context=".DashboardActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,14 +15,15 @@
         android:layout_margin="20dp">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="25dp"
             android:textStyle="bold"
             android:textColor="@color/primary"
-            android:text="Gunung Pedia" />
+            android:text="Gunung Pedia"
+            android:onClick="home"/>
 
         <ImageView
             android:id="@+id/aboutus"
@@ -119,10 +120,11 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/primary"
-            android:text="Log Out" />
+            android:text="Log Out"
+            android:onClick="logout"/>
     </LinearLayout>
 </LinearLayout>
