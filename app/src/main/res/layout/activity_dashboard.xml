@@ -29,7 +29,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/icons8_about_us_35">
+            app:srcCompat="@drawable/icons8_about_us_35"/>
 
         <ImageView
             android:id="@+id/imageView6"
@@ -43,33 +43,164 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="10dp">
+        android:layout_margin="20dp">
 
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Hallo Sobat para Pecinta Gunung" />
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="15dp"
             android:textStyle="bold"
-            android:text="Selamar datang di Aplikasi Gunung pedia" />
+            android:layout_marginBottom="10dp"
+            android:text="Selamat Datang Di Aplikasi Gunung Pedia" />
 
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/bromo" />
+            android:background="@drawable/panel1"
+            app:srcCompat="@drawable/bromo"
+            android:scaleType="centerCrop"
+            android:elevation="16dp"
+            android:clipToOutline="true"/>
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
+            android:textSize="20dp"
             android:textStyle="bold"
-            android:text="Berikut ini Pilihan Gunung di Indonesia" />
+            android:layout_marginTop="10dp"
+            android:text="Lokasi Gunung" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/jabar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Jawa Barat" />
+
+            <ImageView
+                android:id="@+id/imgjabar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_weight="0"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/panel1"
+                app:srcCompat="@drawable/jawabarat"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/jatim"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Jawa Timur" />
+
+            <ImageView
+                android:id="@+id/imgjatim"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_weight="0"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/panel1"
+                app:srcCompat="@drawable/jawabarat"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/jateng"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Jawa Tengah" />
+
+            <ImageView
+                android:id="@+id/imgjateng"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_weight="0"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/panel1"
+                app:srcCompat="@drawable/jawabarat"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/luarjawa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Luar Pulau Jawa" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_weight="0"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/panel1"
+                app:srcCompat="@drawable/jawabarat"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"/>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
