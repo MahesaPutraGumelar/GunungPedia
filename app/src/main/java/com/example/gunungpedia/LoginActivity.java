@@ -1,6 +1,7 @@
 package com.example.gunungpedia;
 
 import android.os.Bundle;
+import android.text.style.TtsSpan;
 import android.widget.EditText;
 import android.widget.Button;
 import android.view.View;
@@ -24,18 +25,45 @@ public class LoginActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-//        ImageView doodle = findViewById(R.id.google);
-//        ImageView twiter = findViewById(R.id.twiter);
-//        ImageView facbook = findViewById(R.id.facebook);
+        ImageView google = findViewById(R.id.google);
+        ImageView twiter = findViewById(R.id.twitter);
+        ImageView facebook = findViewById(R.id.facebook);
 
-//        google.setOnClikListener(v -> {
-//            Intent intent = new Intent(Intent.ACTION_VIEW);
-//            Intent.setData(Url.parse)
-//        })
+        google.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://accounts.google.com/sigin"));
+            startActivity(intent);
+        });
+
+        twiter.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://twitter.com/login"));
+            startActivity(intent);
+        });
+
+        facebook.setOnClickListener(v -> {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse("https://facebook.com/login"));
+                    startActivity(intent);
+                });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void login(View view) {
+        email = findViewById(R.id.email);
+        pass = findViewById(R.id.pass);
+        login = findViewById(R.id.Login);
+
+        if (email.getText().toString().equals("Admin@gmail.com") && pass.getText().toString().equals("admin")){
+            Intent intent = new Intent ( LoginActivity.this, DashboardActivity.class);
+            startActivity(intent);
+        }
+        else {
+            email.setError("Email atau password salah");
+            pass.setError("Email atau pass Salah");
+        }
     }
 }
