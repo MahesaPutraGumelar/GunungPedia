@@ -103,144 +103,191 @@
                 android:orientation="vertical">
 
                 <!-- Jawa Barat -->
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white">
 
-                    <TextView
-                        android:id="@+id/jabar"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Jawa Barat" />
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:gravity="center_vertical">
 
-                    <ImageView
-                        android:id="@+id/imgjabar"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/panel1"
-                        app:srcCompat="@drawable/jawabarat"
-                        android:scaleType="centerCrop"
-                        android:clipToOutline="true" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/jabar"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:text="Jawa Barat" />
+
+                        <ImageView
+                            android:id="@+id/imgjabar"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            app:srcCompat="@drawable/jawabarat"
+                            android:scaleType="centerCrop"
+                            android:clipToOutline="true" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
                 <!-- Jawa Timur -->
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white">
 
-                    <TextView
-                        android:id="@+id/jatim"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Jawa Timur" />
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:gravity="center_vertical">
 
-                    <ImageView
-                        android:id="@+id/imgjatim"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/panel1"
-                        app:srcCompat="@drawable/jawabarat"
-                        android:scaleType="centerCrop"
-                        android:clipToOutline="true" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/jawaTimur"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:text="Jawa Timur" />
 
+                        <ImageView
+                            android:id="@+id/imgjabar"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            app:srcCompat="@drawable/jawabarat"
+                            android:scaleType="centerCrop"
+                            android:clipToOutline="true" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
                 <!-- Jawa Tengah -->
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white">
 
-                    <TextView
-                        android:id="@+id/jateng"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Jawa Tengah" />
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:gravity="center_vertical">
 
-                    <ImageView
-                        android:id="@+id/imgjateng"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/panel1"
-                        app:srcCompat="@drawable/jawabarat"
-                        android:scaleType="centerCrop"
-                        android:clipToOutline="true" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/jateng"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:text="Jawa Tengah" />
 
-                <!-- Luar Pulau Jawa -->
-                <LinearLayout
+                        <ImageView
+                            android:id="@+id/imgjabar"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            app:srcCompat="@drawable/jawabarat"
+                            android:scaleType="centerCrop"
+                            android:clipToOutline="true" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Sumatra -->
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white">
 
-                    <TextView
-                        android:id="@+id/sumatra"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Sumatra" />
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:gravity="center_vertical">
 
-                    <ImageView
-                        android:id="@+id/imageView8"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/panel1"
-                        app:srcCompat="@drawable/jawabarat"
-                        android:scaleType="centerCrop"
-                        android:clipToOutline="true" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/sumtra"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:text="Sumatera" />
+
+                        <ImageView
+                            android:id="@+id/imgjabar"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            app:srcCompat="@drawable/jawabarat"
+                            android:scaleType="centerCrop"
+                            android:clipToOutline="true" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
                 <!-- Additional regions (Kalimantan, Bali, etc.)-->
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginBottom="30dp">
+                    android:layout_marginBottom="30dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="@color/white">
 
-                    <TextView
-                        android:id="@+id/bali"
-                        android:layout_width="0dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Bali" />
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:gravity="center_vertical">
 
-                    <ImageView
-                        android:id="@+id/imageView11"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/panel1"
-                        app:srcCompat="@drawable/jawabarat"
-                        android:scaleType="centerCrop"
-                        android:clipToOutline="true" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/kalimantan"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:text="Kalimantan" />
 
+                        <ImageView
+                            android:id="@+id/imgjabar"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            app:srcCompat="@drawable/jawabarat"
+                            android:scaleType="centerCrop"
+                            android:clipToOutline="true" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
 
     <!-- Bottom Navbar -->
     <LinearLayout
@@ -253,28 +300,30 @@
         android:gravity="center">
 
         <ImageView
+            android:id="@+id/nav_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_help"
+            android:contentDescription="Help"
+            android:onClick="help"
+            android:layout_marginEnd="100dp" /> <!-- Menambahkan margin end pada nav_home -->
+
+        <ImageView
             android:id="@+id/nav_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_home"
             android:contentDescription="Home"
-            android:layout_marginEnd="100dp" /> <!-- Menambahkan margin end pada nav_home -->
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            /> <!-- Sudah ada margin yang ditambahkan -->
 
         <ImageView
             android:id="@+id/nav_favorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_favorites"
-            android:contentDescription="Favorit"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp" /> <!-- Sudah ada margin yang ditambahkan -->
-
-        <ImageView
-            android:id="@+id/nav_help"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_help"
-            android:contentDescription="Bantuan"
+            android:contentDescription="favorite"
             android:layout_marginStart="100dp" /> <!-- Menambahkan margin start pada nav_help -->
     </LinearLayout>
     </LinearLayout>

@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AboutUsActivity">
+    tools:context=".Help">
 
-    <!-- Header Section -->
+    <!-- Header Section with Home, About Us, and Profile Icons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,54 +65,48 @@
                 android:gravity="center"
                 android:layout_marginBottom="16dp">
 
-                <ImageView
-                    android:id="@+id/logo"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    app:srcCompat="@drawable/icons8_mountain_40"
-                    android:layout_marginEnd="8dp" />
-
                 <TextView
                     android:id="@+id/brandName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gunung Pedia"
+                    android:text="Pusat Bantuan"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     android:textColor="@color/primary" />
             </LinearLayout>
 
-            <!-- About the Application -->
+            <!-- Description Text Below Title -->
             <TextView
-                android:id="@+id/aboutApp"
+                android:id="@+id/descriptionText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Gunung Pedia adalah aplikasi yang memberikan informasi mengenai gunung-gunung di Indonesia, mulai dari Pulau Jawa , Kalimantan , Sumatra dll.."
+                android:text="Jika Anda membutuhkan bantuan atau informasi lebih lanjut, Anda bisa menghubungi kami melalui kontak yang tersedia di bawah."
                 android:textSize="16sp"
                 android:lineSpacingExtra="4dp"
                 android:justificationMode="inter_word"
                 android:textColor="@android:color/black"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="30dp" />
 
+            <!-- Contact Customer Service Section -->
             <TextView
-                android:id="@+id/aboutApp"
+                android:id="@+id/contactUs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tim Pengembang"
-                android:textSize="20dp"
+                android:text="Hubungi CS"
+                android:textSize="20sp"
                 android:lineSpacingExtra="4dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
                 android:layout_marginBottom="16dp" />
 
-            <!-- Developer Cards -->
+            <!-- Contact Methods (Email, WhatsApp, Instagram) -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginBottom="16dp">
 
-                <!-- Developer 1 -->
+                <!-- Email -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -127,38 +121,24 @@
                         android:padding="16dp">
 
                         <ImageView
-                            android:id="@+id/dev1Image"
+                            android:id="@+id/emailIcon"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            app:srcCompat="@drawable/logogunung"
+                            app:srcCompat="@drawable/icons8_gmail_30"
                             android:layout_marginEnd="16dp" />
 
-                        <LinearLayout
-                            android:layout_width="0dp"
+                        <TextView
+                            android:id="@+id/emailContact"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_weight="1">
-
-                            <TextView
-                                android:id="@+id/dev1Name"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Mahesa Putra Gumelar"
-                                android:textStyle="bold"
-                                android:textSize="16sp" />
-
-                            <TextView
-                                android:id="@+id/dev1Role"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="UI Designer"
-                                android:textSize="14sp"
-                                android:textColor="@android:color/darker_gray" />
-                        </LinearLayout>
+                            android:text="support@gunungpedia.com"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- Developer 2 -->
+                <!-- WhatsApp -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -173,38 +153,24 @@
                         android:padding="16dp">
 
                         <ImageView
-                            android:id="@+id/dev2Image"
+                            android:id="@+id/whatsappIcon"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            app:srcCompat="@drawable/logogunung"
+                            app:srcCompat="@drawable/ic_whatsapp"
                             android:layout_marginEnd="16dp" />
 
-                        <LinearLayout
-                            android:layout_width="0dp"
+                        <TextView
+                            android:id="@+id/whatsappContact"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_weight="1">
-
-                            <TextView
-                                android:id="@+id/dev2Name"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Rifky Andrianto"
-                                android:textStyle="bold"
-                                android:textSize="16sp" />
-
-                            <TextView
-                                android:id="@+id/dev2Role"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="UX Designer"
-                                android:textSize="14sp"
-                                android:textColor="@android:color/darker_gray" />
-                        </LinearLayout>
+                            android:text="+62 812-3456-7890"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- Developer 3 -->
+                <!-- Instagram -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -218,39 +184,27 @@
                         android:padding="16dp">
 
                         <ImageView
-                            android:id="@+id/dev3Image"
+                            android:id="@+id/instagramIcon"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            app:srcCompat="@drawable/logogunung"
+                            app:srcCompat="@drawable/ic_instagram"
                             android:layout_marginEnd="16dp" />
 
-                        <LinearLayout
-                            android:layout_width="0dp"
+                        <TextView
+                            android:id="@+id/instagramContact"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_weight="1">
-
-                            <TextView
-                                android:id="@+id/dev3Name"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Chandra"
-                                android:textStyle="bold"
-                                android:textSize="16sp" />
-
-                            <TextView
-                                android:id="@+id/dev3Role"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Figma Specialist"
-                                android:textSize="14sp"
-                                android:textColor="@android:color/darker_gray" />
-                        </LinearLayout>
+                            android:text=" @gunungpedia"
+                            android:layout_gravity="center"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <!-- Bottom Navigation -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -266,7 +220,7 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_help"
             android:contentDescription="Home"
-            android:layout_marginEnd="100dp" /> <!-- Menambahkan margin end pada nav_home -->
+            android:layout_marginEnd="100dp" />
 
         <ImageView
             android:id="@+id/nav_home"
@@ -275,7 +229,7 @@
             app:srcCompat="@drawable/ic_home"
             android:contentDescription="Favorit"
             android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp" /> <!-- Sudah ada margin yang ditambahkan -->
+            android:layout_marginEnd="30dp" />
 
         <ImageView
             android:id="@+id/nav_favorite"
@@ -283,6 +237,6 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_favorites"
             android:contentDescription="Bantuan"
-            android:layout_marginStart="100dp" /> <!-- Menambahkan margin start pada nav_help -->
+            android:layout_marginStart="100dp" />
     </LinearLayout>
 </LinearLayout>
