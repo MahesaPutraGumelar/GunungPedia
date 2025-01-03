@@ -24,7 +24,6 @@
             android:textStyle="bold"
             android:fontFamily="@font/poppins_bold"
             android:textColor="@color/primary"
-            android:onClick="home"
             android:text="Gunung Pedia" />
 
         <ImageView
@@ -50,57 +49,13 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:fillViewport="true">
-        <LinearLayout
+
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="30dp">
+            android:id="@+id/listG"
+            android:scrollbars="vertical"/>
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/poppins_bold"
-                android:text="Hallo Sobat para Pecinta Gunung" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="@font/poppins_light"
-                android:text="Selamat Datang Di Aplikasi Gunung Pedia" />
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/panel1"
-                app:srcCompat="@drawable/bromo"
-                android:scaleType="centerCrop"
-                android:elevation="16dp"
-                android:clipToOutline="true" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/poppins_bold"
-                android:text="Lokasi Gunung" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/listG"
-                android:scrollbars="vertical"/>
-        </LinearLayout>
     </ScrollView>
 
     <!-- Bottom Navbar -->
@@ -130,6 +85,7 @@
             android:contentDescription="Home"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
+            android:onClick="home"
             /> <!-- Sudah ada margin yang ditambahkan -->
 
         <ImageView
@@ -140,4 +96,4 @@
             android:contentDescription="favorite"
             android:layout_marginStart="100dp" /> <!-- Menambahkan margin start pada nav_help -->
     </LinearLayout>
-    </LinearLayout>
+</LinearLayout>

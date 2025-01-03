@@ -13,10 +13,13 @@
         android:theme="@style/Theme.GunungPedia"
         tools:targetApi="31">
         <activity
-            android:name=".Help"
+            android:name=".DetailGunungActivity"
             android:exported="false" />
         <activity
-            android:name=".RecycleViewActivity"
+            android:name=".MountainInProvinceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Help"
             android:exported="false" />
         <activity
             android:name=".AboutUsActivity"
