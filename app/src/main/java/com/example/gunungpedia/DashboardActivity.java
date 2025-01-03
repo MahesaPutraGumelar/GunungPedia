@@ -1,7 +1,5 @@
 package com.example.gunungpedia;
 
-import static com.example.gunungpedia.R.*;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -48,6 +46,7 @@ public class DashboardActivity extends AppCompatActivity implements ProvinsiAdap
     public void profile (View view){
         Intent intent = new Intent(DashboardActivity.this, ProfileActivity.class);
         startActivity(intent);
+
     }public void aboutus (View view){
         Intent intent = new Intent(DashboardActivity.this, AboutUsActivity.class);
         startActivity(intent);

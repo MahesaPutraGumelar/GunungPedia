@@ -34,6 +34,10 @@ public class ProfileActivity extends AppCompatActivity {
         Intent intent = new Intent(ProfileActivity.this, DashboardActivity.class);
         startActivity(intent);
     }
+    public void help (View view){
+        Intent intent = new Intent(ProfileActivity.this, Help.class);
+        startActivity(intent);
+    }
     public void logout (View view){
         Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
         startActivity(intent);

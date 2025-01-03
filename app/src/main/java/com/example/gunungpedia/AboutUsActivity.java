@@ -34,4 +34,9 @@ public class AboutUsActivity extends AppCompatActivity {
         Intent intent = new Intent(AboutUsActivity.this, DashboardActivity.class);
         startActivity(intent);
     }
+    public void help (View view){
+        Intent intent = new Intent(AboutUsActivity.this, Help.class);
+        startActivity(intent);
+    }
+
 }
