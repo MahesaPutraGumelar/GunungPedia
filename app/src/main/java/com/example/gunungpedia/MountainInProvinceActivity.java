@@ -45,7 +45,7 @@ public class MountainInProvinceActivity extends AppCompatActivity implements InP
                         "Gunung Ciremai",
                         "Tinggi 3,078 m",
                         "Gunung Ciremai, dengan ketinggian 3.078 meter di atas permukaan laut (mdpl), merupakan gunung tertinggi di Jawa Barat. Terletak di perbatasan Kabupaten Kuningan dan Kabupaten Majalengka, gunung berapi ini memiliki kawah ganda dengan radius masing-masing 400 meter dan 600 meter. Kawasan Gunung Ciremai termasuk dalam Taman Nasional Gunung Ciremai (TNGC) yang memiliki luas sekitar 15.000 hektar. Selain menjadi tujuan favorit para pendaki, Gunung Ciremai juga memiliki nilai sejarah dan budaya yang penting bagi masyarakat setempat.",
-                        "gunungCiremai"
+                        "GunungCiremai"
                 );
 
                 addMountain(
