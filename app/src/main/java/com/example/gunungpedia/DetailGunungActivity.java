@@ -3,6 +3,7 @@ package com.example.gunungpedia;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,7 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class DetailGunungActivity extends AppCompatActivity {
     private TextView namaG, tinggiG, DesG, tittleG;
-    private String nama, tinggi, deskripsi;
+    private String nama, tinggi, deskripsi, img;
+    private ImageView imgG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +36,18 @@ public class DetailGunungActivity extends AppCompatActivity {
         namaG = findViewById(R.id.namagunung);
         tinggiG = findViewById(R.id.tinggigunung);
         DesG = findViewById(R.id.deskripsigunung);
+        imgG = findViewById(R.id.imggunung);
 
         // Retrieve and set Intent data
         nama = getIntent().getStringExtra("nama");
         tinggi = getIntent().getStringExtra("tinggi");
         deskripsi = getIntent().getStringExtra("deskripsi");
+        img = getIntent().getStringExtra("img");
 
         if (nama != null) namaG.setText(nama);
         if (nama != null) tittleG.setText(nama);
         if (tinggi != null) tinggiG.setText(tinggi);
+        if (img != null) imgG.setImageResource(getResources().getIdentifier(img, "drawable", getPackageName()));
         if (deskripsi != null) DesG.setText(deskripsi);
     }
 

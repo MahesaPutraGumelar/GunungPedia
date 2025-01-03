@@ -15,12 +15,13 @@ import java.util.Map;
 public class InProvinsiAdapter extends RecyclerView.Adapter<InProvinsiAdapter.ViewHolder> {
 
     private final List<Map<String, String>> data;
-    private OnItemClickListener onItemCLickListener;
-    public InProvinsiAdapter(List<Map<String, String>> data, OnItemClickListener onItemCLickListener) {
-        this.data = data;
-        this.onItemCLickListener = onItemCLickListener;
+    private OnItemClickListener onItemClickListener;
 
+    public InProvinsiAdapter(List<Map<String, String>> data, OnItemClickListener onItemClickListener) {
+        this.data = data;
+        this.onItemClickListener = onItemClickListener;
     }
+
     public interface OnItemClickListener {
         void onItemClick(Map<String, String> d);
     }
@@ -34,11 +35,33 @@ public class InProvinsiAdapter extends RecyclerView.Adapter<InProvinsiAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull InProvinsiAdapter.ViewHolder holder, int position) {
-        holder.textView1.setText(data.get(position).get("nama"));
-        holder.textView2.setText(data.get(position).get("tinggi"));
-        holder.itemView.setOnClickListener(v->{
-            if (onItemCLickListener != null) {
-                onItemCLickListener.onItemClick(data.get(position));
+        Map<String, String> gunung = data.get(position);
+
+        // Retrieve map data with null checks and provide default values if necessary
+        String namaGunung = gunung.get("nama") != null ? gunung.get("nama") : "Nama tidak tersedia";
+        String tinggiGunung = gunung.get("tinggi") != null ? gunung.get("tinggi") : "Tinggi tidak tersedia";
+        holder.textView1.setText(namaGunung);
+        holder.textView2.setText(tinggiGunung);
+
+        // Safely handle the image name and provide fallback if null
+        String imageName = gunung.get("img");
+        if (imageName != null && !imageName.isEmpty()) {
+            int imageResId = holder.itemView.getContext().getResources().getIdentifier(imageName, "drawable", holder.itemView.getContext().getPackageName());
+            if (imageResId != 0) {
+                holder.imageView.setImageResource(imageResId);
+            } else {
+                // Set a default image if the resource is not found
+                holder.imageView.setImageResource(R.drawable.bromo);  // Replace with your default image resource
+            }
+        } else {
+            // Set a default image if imageName is null or empty
+            holder.imageView.setImageResource(R.drawable.bromo);  // Replace with your default image resource
+        }
+
+        // Set item click listener
+        holder.itemView.setOnClickListener(v -> {
+            if (onItemClickListener != null) {
+                onItemClickListener.onItemClick(data.get(position));
             }
         });
     }
@@ -46,15 +69,14 @@ public class InProvinsiAdapter extends RecyclerView.Adapter<InProvinsiAdapter.Vi
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView textView1, textView2;
         ImageView imageView;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textView1 = itemView.findViewById(R.id.namagunung);
             textView2 = itemView.findViewById(R.id.tinggi);
             imageView = itemView.findViewById(R.id.imggunung);
-
         }
     }
-
 
     @Override
     public int getItemCount() {
