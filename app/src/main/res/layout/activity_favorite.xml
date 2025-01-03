@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DashboardActivity">
+    tools:context=".FavoriteActivity">
 
     <!-- Header Section -->
     <LinearLayout
@@ -16,7 +16,7 @@
         android:layout_margin="20dp">
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -42,85 +42,47 @@
             android:onClick="profile"
             app:srcCompat="@drawable/icons8_test_account_35" />
     </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favorite"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/primary"/>
+    </LinearLayout>
     <!-- Main Content with ScrollView -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:fillViewport="true"
-        android:layout_margin="20dp">
+        android:layout_margin="20dp"
+        android:fillViewport="true">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="0dp"
+            android:fillViewport="true">
 
-            <ImageView
-                android:id="@+id/imggunung"
+            <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/bromo" />
+                android:id="@+id/listG"
+                android:scrollbars="vertical"/>
 
-            <TextView
-                android:id="@+id/namagunung"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="Bromo" />
+        </ScrollView>
 
-            <TextView
-                android:id="@+id/tinggigunung"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="Bromo"
-                android:layout_marginBottom="5dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="Deskripsi"/>
-
-            <TextView
-                android:id="@+id/deskripsigunung"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:justificationMode="inter_word"
-                android:text="Bromo" />
-        </LinearLayout>
     </ScrollView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="20dp">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:text="Simpan"
-            android:backgroundTint="@color/primary"
-            android:layout_marginRight="15dp"
-            android:onClick="save"/>
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/primary"
-            android:text="Bagikan"
-            android:onClick="share"/>
-
-    </LinearLayout>
     <!-- Bottom Navbar -->
     <LinearLayout
         android:layout_width="match_parent"

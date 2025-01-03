@@ -38,5 +38,10 @@ public class AboutUsActivity extends AppCompatActivity {
         Intent intent = new Intent(AboutUsActivity.this, Help.class);
         startActivity(intent);
     }
+    public void favorite (View view){
+        Intent intent = new Intent(AboutUsActivity.this, FavoriteActivity.class);
+        startActivity(intent);
+    }
+
 
 }

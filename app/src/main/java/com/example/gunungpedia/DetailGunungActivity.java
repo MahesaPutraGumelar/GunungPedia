@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class DetailGunungActivity extends AppCompatActivity {
     private TextView namaG, tinggiG, DesG, tittleG;
+    private String nama, tinggi, deskripsi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,29 +36,54 @@ public class DetailGunungActivity extends AppCompatActivity {
         DesG = findViewById(R.id.deskripsigunung);
 
         // Retrieve and set Intent data
-        String nama = getIntent().getStringExtra("nama");
-        String tinggi = getIntent().getStringExtra("tinggi");
-        String deskripsi = getIntent().getStringExtra("deskripsi");
+        nama = getIntent().getStringExtra("nama");
+        tinggi = getIntent().getStringExtra("tinggi");
+        deskripsi = getIntent().getStringExtra("deskripsi");
 
         if (nama != null) namaG.setText(nama);
         if (nama != null) tittleG.setText(nama);
         if (tinggi != null) tinggiG.setText(tinggi);
         if (deskripsi != null) DesG.setText(deskripsi);
     }
-    public void profile (View view) {
+
+    public void profile(View view) {
         Intent intent = new Intent(DetailGunungActivity.this, ProfileActivity.class);
         startActivity(intent);
     }
-    public void aboutus (View view) {
+
+    public void aboutus(View view) {
         Intent intent = new Intent(DetailGunungActivity.this, AboutUsActivity.class);
         startActivity(intent);
     }
-    public void home (View view) {
+
+    public void home(View view) {
         Intent intent = new Intent(DetailGunungActivity.this, DashboardActivity.class);
         startActivity(intent);
     }
-    public void help (View view) {
+
+    public void help(View view) {
         Intent intent = new Intent(DetailGunungActivity.this, Help.class);
         startActivity(intent);
+    }
+
+    public void save(View view) {
+        // Simpan data gunung ke favorit (logika penyimpanan bisa ditambahkan sesuai kebutuhan)
+        Toast.makeText(this, "Berhasil disimpan ke Favorit!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(DetailGunungActivity.this, FavoriteActivity.class);
+        startActivity(intent);
+    }
+    public void favorite (View view){
+        Intent intent = new Intent(DetailGunungActivity.this, FavoriteActivity.class);
+        startActivity(intent);
+    }
+
+    public void share(View view) {
+        // Membagikan detail gunung
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        String shareBody = "Gunung " + nama + " memiliki tinggi " + tinggi + " meter.\n" + deskripsi;
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Gunung Pedia");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(shareIntent, "Bagikan melalui"));
     }
 }

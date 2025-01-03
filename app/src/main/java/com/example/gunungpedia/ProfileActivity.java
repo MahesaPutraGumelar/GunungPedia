@@ -42,4 +42,9 @@ public class ProfileActivity extends AppCompatActivity {
         Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
         startActivity(intent);
     }
+    public void favorite (View view){
+        Intent intent = new Intent(ProfileActivity.this, FavoriteActivity.class);
+        startActivity(intent);
+    }
+
 }

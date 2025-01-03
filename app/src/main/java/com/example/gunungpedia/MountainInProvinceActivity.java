@@ -123,5 +123,8 @@ public class MountainInProvinceActivity extends AppCompatActivity implements InP
         Intent intent = new Intent(MountainInProvinceActivity.this, Help.class);
         startActivity(intent);
     }
-
+    public void favorite (View view) {
+        Intent intent = new Intent(MountainInProvinceActivity.this, FavoriteActivity.class);
+        startActivity(intent);
+    }
 }

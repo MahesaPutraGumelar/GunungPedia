@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DashboardActivity">
+    tools:context=".MountainInProvinceActivity">
 
     <!-- Header Section -->
     <LinearLayout
@@ -95,6 +95,7 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_favorites"
             android:contentDescription="favorite"
-            android:layout_marginStart="100dp" /> <!-- Menambahkan margin start pada nav_help -->
+            android:layout_marginStart="100dp"
+            android:onClick="favorite"/> <!-- Menambahkan margin start pada nav_help -->
     </LinearLayout>
 </LinearLayout>

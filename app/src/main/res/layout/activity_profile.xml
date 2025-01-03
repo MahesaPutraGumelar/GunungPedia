@@ -122,7 +122,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/primary"
-            android:text="Log Out" />
+            android:text="Log Out"
+            android:onClick="logout"/>
     </LinearLayout>
 
     <!-- Bottom Navbar -->
@@ -166,6 +167,7 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_favorites"
             android:contentDescription="favorite"
-            android:layout_marginStart="100dp" /> <!-- Menambahkan margin start pada nav_help -->
+            android:layout_marginStart="100dp"
+            android:onClick="favorite"/> <!-- Menambahkan margin start pada nav_help -->
     </LinearLayout>
 </LinearLayout>
