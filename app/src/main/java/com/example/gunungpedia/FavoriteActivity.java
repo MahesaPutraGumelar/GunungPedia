@@ -36,11 +36,11 @@ public class FavoriteActivity extends AppCompatActivity implements InProvinsiAda
         RecyclerView recycleView = findViewById(R.id.listG);
         recycleView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         List<Map<String, String>> dataGunung = new ArrayList<>();
-//        addMountain(dataGunung, "Gunung Ciremai", "Tinggi 3,078 m", "Gunung tertinggi di Jawa Barat", "GunungCiremai.jpg");
-//        addMountain(dataGunung, "Gunung Gede", "2,958 m", "Bagian dari Taman Nasional Gunung Gede Pangrango", "GunungGede.jpg");
-//        addMountain(dataGunung, "Gunung Pangrango", "3,019 m", "Pemandangan indah dan padang edelweiss", "GunungPangrango.jpg");
-//        addMountain(dataGunung, "Gunung Papandayan", "2,665 m", "Kawah belerang aktif", "GunungPapandayan.jpg");
-//        addMountain(dataGunung, "Gunung Tangkuban Perahu", "2,084 m", "Gunung bersejarah dengan kawah unik", "GunungTangkubanPerahu.jpg");
+        addMountain(dataGunung, "Gunung Ciremai", "Tinggi 3,078 m", "Gunung tertinggi di Jawa Barat", "gunungciremai.jpg");
+        addMountain(dataGunung, "Gunung Gede", "2,958 m", "Bagian dari Taman Nasional Gunung Gede Pangrango", "gununggede.jpg");
+        addMountain(dataGunung, "Gunung Pangrango", "3,019 m", "Pemandangan indah dan padang edelweiss", "gunungpangrango.jpg");
+        addMountain(dataGunung, "Gunung Papandayan", "2,665 m", "Kawah belerang aktif", "gunungpapandayan.jpg");
+        addMountain(dataGunung, "Gunung Tangkuban Perahu", "2,084 m", "Gunung bersejarah dengan kawah unik", "gunungtangkubanperahu.jpg");
         InProvinsiAdapter adapter = new InProvinsiAdapter(dataGunung, this);
         recycleView.setAdapter(adapter);
     }

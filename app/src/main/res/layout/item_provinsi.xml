@@ -35,7 +35,7 @@
                 android:id="@+id/imgprov"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                app:srcCompat="@drawable/jawabarat"
+                app:srcCompat="@drawable/ic_gunung"
                 android:scaleType="centerCrop"
                 android:clipToOutline="true" />
 
