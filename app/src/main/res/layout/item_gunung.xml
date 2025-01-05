@@ -26,6 +26,7 @@
             <!-- Gambar Gunung -->
             <ImageView
                 android:id="@+id/imggunung"
+                android:background="@drawable/panel1"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginEnd="10dp"

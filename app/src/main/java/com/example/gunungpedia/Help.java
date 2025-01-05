@@ -17,12 +17,10 @@ public class Help extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
 
-        // Initialize views
         gmail = findViewById(R.id.gmail);
         whatsapp = findViewById(R.id.whatsapp);
         instagram = findViewById(R.id.instagram);
 
-        // Set onClick listeners for contact options
         gmail.setOnClickListener(v -> openUrl("mailto:support@gunungpedia.com"));
         whatsapp.setOnClickListener(v -> openUrl("https://wa.me/6281234567890"));
         instagram.setOnClickListener(v -> openUrl("https://www.instagram.com/gunungpedia/"));

@@ -23,22 +23,18 @@ public class DetailGunungActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_detail_gunung);
-
-        // Adjust for system bars
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        // Initialize TextViews
         tittleG = findViewById(R.id.title);
         namaG = findViewById(R.id.namagunung);
         tinggiG = findViewById(R.id.tinggigunung);
         DesG = findViewById(R.id.deskripsigunung);
         imgG = findViewById(R.id.imggunung);
 
-        // Retrieve and set Intent data
         nama = getIntent().getStringExtra("nama");
         tinggi = getIntent().getStringExtra("tinggi");
         deskripsi = getIntent().getStringExtra("deskripsi");
@@ -72,7 +68,6 @@ public class DetailGunungActivity extends AppCompatActivity {
     }
 
     public void save(View view) {
-        // Simpan data gunung ke favorit (logika penyimpanan bisa ditambahkan sesuai kebutuhan)
         Toast.makeText(this, "Berhasil disimpan ke Favorit!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(DetailGunungActivity.this, FavoriteActivity.class);
         startActivity(intent);

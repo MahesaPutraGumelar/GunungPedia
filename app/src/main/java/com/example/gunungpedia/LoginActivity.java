@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
         pass = findViewById(R.id.pass);
         login = findViewById(R.id.Login);
 
-        if (email.getText().toString().equals("1") && pass.getText().toString().equals("1")){
+        if (email.getText().toString().equals("admin@gmail.com") && pass.getText().toString().equals("admin")){
             Intent intent = new Intent ( LoginActivity.this, DashboardActivity.class);
             startActivity(intent);
         }
@@ -65,5 +65,9 @@ public class LoginActivity extends AppCompatActivity {
             email.setError("Email atau password salah");
             pass.setError("Email atau pass Salah");
         }
+    }
+    public void register(View view) {
+        Intent intent = new Intent ( LoginActivity.this, RegisterActivity.class);
+        startActivity(intent);
     }
 }

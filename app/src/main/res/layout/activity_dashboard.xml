@@ -77,12 +77,12 @@
             <ImageView
                 android:id="@+id/imageView7"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:background="@drawable/panel1"
-                app:srcCompat="@drawable/bromo"
-                android:scaleType="centerCrop"
+                android:clipToOutline="true"
                 android:elevation="16dp"
-                android:clipToOutline="true" />
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/gunungtangkubanperahu" />
 
             <TextView
                 android:id="@+id/textView4"
