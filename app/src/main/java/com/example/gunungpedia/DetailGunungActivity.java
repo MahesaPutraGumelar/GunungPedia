@@ -81,9 +81,7 @@ public class DetailGunungActivity extends AppCompatActivity {
         Intent intent = new Intent(DetailGunungActivity.this, FavoriteActivity.class);
         startActivity(intent);
     }
-
     public void share(View view) {
-        // Membagikan detail gunung
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
         String shareBody = "Gunung " + nama + " memiliki tinggi " + tinggi + " meter.\n" + deskripsi;

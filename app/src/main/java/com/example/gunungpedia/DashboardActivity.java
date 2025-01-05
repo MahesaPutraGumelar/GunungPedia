@@ -38,7 +38,6 @@ public class DashboardActivity extends AppCompatActivity implements ProvinsiAdap
         data.add("Jawa Timur");
         data.add("Kalimantan Barat");
         data.add("Kalimantan Selatan");
-        data.add("Kalimantan Tengah");
         ProvinsiAdapter adapter = new ProvinsiAdapter(data, this);
         recycleView.setAdapter(adapter);
 

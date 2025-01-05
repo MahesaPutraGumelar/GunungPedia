@@ -36,11 +36,37 @@ public class FavoriteActivity extends AppCompatActivity implements InProvinsiAda
         RecyclerView recycleView = findViewById(R.id.listG);
         recycleView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         List<Map<String, String>> dataGunung = new ArrayList<>();
-        addMountain(dataGunung, "Gunung Ciremai", "Tinggi 3,078 m", "Gunung tertinggi di Jawa Barat", "gunungciremai.jpg");
-        addMountain(dataGunung, "Gunung Gede", "2,958 m", "Bagian dari Taman Nasional Gunung Gede Pangrango", "gununggede.jpg");
-        addMountain(dataGunung, "Gunung Pangrango", "3,019 m", "Pemandangan indah dan padang edelweiss", "gunungpangrango.jpg");
-        addMountain(dataGunung, "Gunung Papandayan", "2,665 m", "Kawah belerang aktif", "gunungpapandayan.jpg");
-        addMountain(dataGunung, "Gunung Tangkuban Perahu", "2,084 m", "Gunung bersejarah dengan kawah unik", "gunungtangkubanperahu.jpg");
+        addMountain(
+                dataGunung,
+                "Gunung Gede",
+                "Tinggi 2,958 m",
+                "Gunung Gede, dengan ketinggian 2.958 mdpl, merupakan bagian dari Taman Nasional Gunung Gede Pangrango yang mencakup wilayah Kabupaten Cianjur dan Sukabumi. Gunung ini terkenal dengan keanekaragaman hayati yang tinggi, termasuk berbagai spesies flora dan fauna endemik. Jalur pendakian yang populer, seperti Cibodas dan Gunung Putri, menawarkan pemandangan alam yang menakjubkan, termasuk alun-alun Suryakencana yang dipenuhi bunga edelweiss. Aktivitas vulkanik Gunung Gede masih terpantau, sehingga pendakian harus memperhatikan status gunung yang dikeluarkan oleh otoritas terkait.",
+                "gununggede"
+        );
+
+        addMountain(
+                dataGunung,
+                "Gunung Pangrango",
+                "Tinggi 3,019 m",
+                "Gunung Pangrango, dengan ketinggian 3.019 mdpl, merupakan gunung tertinggi kedua di Jawa Barat setelah Gunung Ciremai. Terletak bersebelahan dengan Gunung Gede, keduanya membentuk kawasan Taman Nasional Gunung Gede Pangrango. Puncak Gunung Pangrango dikenal dengan nama Mandalawangi, yang menawarkan pemandangan alam yang indah dan padang edelweiss yang luas. Meskipun tidak seaktif Gunung Gede, pendakian ke Gunung Pangrango memerlukan persiapan fisik yang baik dan izin dari pihak taman nasional.",
+                "gunungpangrango"
+        );
+
+        addMountain(
+                dataGunung,
+                "Gunung Papandayan",
+                "Tinggi 2,665 m",
+                "Gunung Papandayan, dengan ketinggian 2.665 mdpl, terletak di Kecamatan Cisurupan, Kabupaten Garut. Gunung berapi ini terkenal dengan kawah belerang yang masih aktif dan pemandangan alam yang menakjubkan. Terdapat beberapa kawah yang dapat dikunjungi, seperti Kawah Mas, Kawah Baru, dan Kawah Nangklak. Selain itu, terdapat area hutan mati yang menjadi daya tarik bagi wisatawan dan fotografer. Meskipun jalur pendakian relatif ramah bagi pendaki pemula, tetap diperlukan kewaspadaan terhadap aktivitas vulkanik dan kondisi cuaca.",
+                "gunungpapandayan"
+        );
+
+        addMountain(
+                dataGunung,
+                "Gunung Tangkuban Perahu",
+                "Tinggi 2,084 m",
+                "Gunung Tangkuban Perahu, dengan ketinggian 2.084 mdpl, terletak di wilayah Lembang, Kabupaten Bandung Barat. Gunung ini memiliki bentuk yang unik dan legenda Sangkuriang yang melekat kuat dalam budaya Sunda. Terdapat beberapa kawah yang menjadi objek wisata, seperti Kawah Ratu, Kawah Domas, dan Kawah Upas. Meskipun merupakan destinasi wisata populer, Gunung Tangkuban Perahu masih aktif, sehingga pengunjung harus mematuhi peraturan dan memperhatikan status aktivitas gunung yang dikeluarkan oleh otoritas setempat.",
+                "gunungtangkubanperahu"
+        );
         InProvinsiAdapter adapter = new InProvinsiAdapter(dataGunung, this);
         recycleView.setAdapter(adapter);
     }
@@ -78,6 +104,11 @@ public class FavoriteActivity extends AppCompatActivity implements InProvinsiAda
 
     @Override
     public void onItemClick(Map<String, String> d) {
-
+        Intent intent = new Intent(FavoriteActivity.this, DetailGunungActivity.class);
+        intent.putExtra("img", d.get("img"));
+        intent.putExtra("nama", d.get("nama"));
+        intent.putExtra("tinggi", d.get("tinggi"));
+        intent.putExtra("deskripsi", d.get("deskripsi"));
+        startActivity(intent);
     }
 }
