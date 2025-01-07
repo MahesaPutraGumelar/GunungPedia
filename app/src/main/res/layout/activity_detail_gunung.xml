@@ -65,6 +65,7 @@
                     android:background="@drawable/panel1"
                     android:scaleType="centerCrop"
                     android:layout_width="match_parent"
+                    android:clipToOutline="true"
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/gunungbromo" />
             </LinearLayout>
