@@ -29,7 +29,6 @@
         <ImageView
             android:id="@+id/aboutus"
             android:background="@drawable/panel1"
-            android:scaleType="centerCrop"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
